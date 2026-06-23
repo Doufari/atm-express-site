@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATM Express — Messagerie & Transport de marchandises en France</title>
+<meta name="description" content="ATM Express : messagerie rapide, livraison express et transport urgent partout en France. Plus de 1000 livraisons par mois, 90% de clients satisfaits, partenaire Carrefour.">
+<meta name="keywords" content="transport marchandises, messagerie rapide, livraison express, transport urgent, livraison France, ATM Express">
+<meta property="og:title" content="ATM Express — Votre partenaire transport et messagerie">
+<meta property="og:description" content="Messagerie rapide et transport de marchandises fiable, partout en France.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-mark">ATM<span>.</span></div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#hero" class="logo" aria-label="ATM Express - Accueil">
+      <span class="logo-mark">ATM</span><span class="logo-dot">.</span>
+      <span class="logo-sub">EXPRESS</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Pourquoi nous</a></li>
+        <li><a href="#work">Réalisations</a></li>
+        <li><a href="#testimonials">Avis clients</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:0773869109" class="header-phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>07 73 86 91 09</span>
+      </a>
+      <a href="#contact" class="btn btn-primary btn-sm">Devis gratuit</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2400&auto=format&fit=crop" alt="" class="hero-img">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+    </div>
+
+    <div class="container hero-content">
+      <p class="hero-eyebrow" data-reveal>
+        <span class="eyebrow-dot"></span>Messagerie & transport — France entière
+      </p>
+      <h1 class="hero-title" data-reveal>
+        Votre colis,<br>
+        <span class="hero-title-accent">notre vitesse.</span>
+      </h1>
+      <p class="hero-subtitle" data-reveal>
+        ATM Express livre plus de 1000 colis chaque mois à travers la France,
+        avec la fiabilité que les plus grandes enseignes — comme Carrefour — nous reconnaissent déjà.
+      </p>
+      <div class="hero-cta" data-reveal>
+        <a href="#contact" class="btn btn-primary btn-lg">
+          Nous contacter
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#services" class="btn btn-ghost btn-lg">Découvrir nos services</a>
+      </div>
+    </div>
+
+    <div class="hero-stats-bar" data-reveal>
+      <div class="container hero-stats-inner">
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="1000" data-suffix="+">0</span>
+          <span class="hero-stat-label">Livraisons / mois</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="90" data-suffix="%">0</span>
+          <span class="hero-stat-label">Clients satisfaits</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="5" data-suffix=" ans">0</span>
+          <span class="hero-stat-label">D'expertise terrain</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num-text">France</span>
+          <span class="hero-stat-label">Couverture nationale</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Défiler vers le bas">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ MARQUEE PARTENAIRES ============ -->
+  <section class="partners-strip" aria-label="Ils nous font confiance">
+    <div class="partners-track">
+      <span class="partner-tag">Partenaire officiel</span>
+      <span class="partner-name">CARREFOUR</span>
+      <span class="partner-divider">—</span>
+      <span class="partner-tag">+1000 livraisons / mois</span>
+      <span class="partner-divider">—</span>
+      <span class="partner-tag">90% de satisfaction client</span>
+      <span class="partner-divider">—</span>
+      <span class="partner-tag">Couverture France entière</span>
+      <span class="partner-divider">—</span>
+      <span class="partner-tag">Partenaire officiel</span>
+      <span class="partner-name">CARREFOUR</span>
+      <span class="partner-divider">—</span>
+      <span class="partner-tag">+1000 livraisons / mois</span>
+      <span class="partner-divider">—</span>
+      <span class="partner-tag">90% de satisfaction client</span>
+      <span class="partner-divider">—</span>
+      <span class="partner-tag">Couverture France entière</span>
+      <span class="partner-divider">—</span>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="section-eyebrow">01 — Qui sommes-nous</p>
+        <h2 class="section-title">Une jeune entreprise,<br>une exigence de grande maison.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-lead" data-reveal>
+          <p class="about-text-lg">
+            Depuis son lancement, ATM Express s'est imposée comme un acteur fiable
+            de la messagerie et du transport de marchandises en France. Notre conviction
+            est simple : la rapidité ne doit jamais coûter la confiance.
+          </p>
+          <p class="about-text">
+            Chaque mois, plus de 1000 livraisons passent par nos mains — et par notre vigilance.
+            Cette rigueur nous a valu la confiance d'enseignes nationales comme Carrefour,
+            et un taux de satisfaction client de 90%.
+          </p>
+        </div>
+
+        <div class="about-cards" data-reveal>
+          <div class="about-card">
+            <div class="about-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Mission</h3>
+            <p>Garantir à chaque client une livraison rapide, sécurisée et transparente, où qu'il se trouve en France.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6M4.22 4.22l4.24 4.24m6.08 6.08l4.24 4.24M1 12h6m10 0h6M4.22 19.78l4.24-4.24m6.08-6.08l4.24-4.24"/></svg>
+            </div>
+            <h3>Vision</h3>
+            <p>Devenir une référence du transport express en France, reconnue pour sa fiabilité autant que pour son agilité.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Valeurs</h3>
+            <p>Ponctualité, transparence et respect de l'engagement pris — sur chaque trajet, sans exception.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="section-eyebrow">02 — Ce que nous faisons</p>
+        <h2 class="section-title">Des solutions de transport,<br>taillées pour chaque urgence.</h2>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card" data-reveal>
+          <div class="service-card-top">
+            <div class="service-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <span class="service-num">01</span>
+          </div>
+          <h3>Messagerie rapide</h3>
+          <p>Vos plis et petits colis livrés en un temps record, avec un suivi clair à chaque étape du trajet.</p>
+          <a href="#contact" class="service-link">Demander un devis <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </article>
+
+        <article class="service-card" data-reveal>
+          <div class="service-card-top">
+            <div class="service-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
+            </div>
+            <span class="service-num">02</span>
+          </div>
+          <h3>Livraison express</h3>
+          <p>Le bon colis, à la bonne adresse, dans le bon délai. Notre cœur de métier, notre engagement quotidien.</p>
+          <a href="#contact" class="service-link">Demander un devis <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </article>
+
+        <article class="service-card" data-reveal>
+          <div class="service-card-top">
+            <div class="service-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="19" cy="7" r="3" stroke-dasharray="2 2"/></svg>
+            </div>
+            <span class="service-num">03</span>
+          </div>
+          <h3>Livraison en binôme</h3>
+          <p>Une organisation à deux livreurs qui optimise les tournées : plus économique, plus écologique.</p>
+          <a href="#contact" class="service-link">Demander un devis <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </article>
+
+        <article class="service-card" data-reveal>
+          <div class="service-card-top">
+            <div class="service-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span class="service-num">04</span>
+          </div>
+          <h3>Transport urgent</h3>
+          <p>Un imprévu, un délai serré ? Notre équipe se mobilise pour une prise en charge immédiate.</p>
+          <a href="#contact" class="service-link">Demander un devis <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY US ============ -->
+  <section class="why" id="why">
+    <div class="why-bg-shape" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-head section-head-light" data-reveal>
+        <p class="section-eyebrow section-eyebrow-light">03 — Pourquoi ATM Express</p>
+        <h2 class="section-title section-title-light">La rigueur d'une grande structure,<br>la réactivité d'une équipe de terrain.</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-stats" data-reveal>
+          <div class="why-stat">
+            <span class="why-stat-num" data-count="1000" data-suffix="+">0</span>
+            <p>Livraisons réalisées chaque mois à travers la France</p>
+          </div>
+          <div class="why-stat">
+            <span class="why-stat-num" data-count="90" data-suffix="%">0</span>
+            <p>De clients satisfaits par notre service</p>
+          </div>
+          <div class="why-stat">
+            <span class="why-stat-num" data-count="5" data-suffix=" ans">0</span>
+            <p>D'expérience dans le transport et la messagerie</p>
+          </div>
+          <div class="why-stat">
+            <span class="why-stat-num-text">1</span>
+            <p>Grande enseigne nationale nous fait confiance : Carrefour</p>
+          </div>
+        </div>
+
+        <div class="why-list" data-reveal>
+          <div class="why-item">
+            <span class="why-item-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <h4>Fiabilité éprouvée</h4>
+              <p>Une exécution rigoureuse, livraison après livraison.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-item-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <h4>Réactivité immédiate</h4>
+              <p>Une équipe capable de répondre aux urgences sans délai.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-item-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <h4>Couverture nationale</h4>
+              <p>Une livraison possible partout en France, sans exception.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-item-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <h4>Approche responsable</h4>
+              <p>Des tournées optimisées pour réduire notre impact écologique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERIE / REALISATIONS ============ -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="section-eyebrow">04 — Sur le terrain</p>
+        <h2 class="section-title">Nos opérations,<br>en mouvement.</h2>
+      </div>
+
+      <div class="work-grid">
+        <figure class="work-item work-item-lg" data-reveal>
+          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1600&auto=format&fit=crop" alt="Camion de livraison ATM Express sur route">
+          <figcaption><span>Transport longue distance</span></figcaption>
+        </figure>
+        <figure class="work-item" data-reveal>
+          <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?q=80&w=1200&auto=format&fit=crop" alt="Entrepôt logistique ATM Express">
+          <figcaption><span>Préparation des colis</span></figcaption>
+        </figure>
+        <figure class="work-item" data-reveal>
+          <img src="https://images.unsplash.com/photo-1620825141358-d8e0e5e3a2f5?q=80&w=1200&auto=format&fit=crop" alt="Livreur ATM Express en zone urbaine">
+          <figcaption><span>Livraison en zone urbaine</span></figcaption>
+        </figure>
+        <figure class="work-item" data-reveal>
+          <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?q=80&w=1200&auto=format&fit=crop" alt="Equipe ATM Express en entrepôt">
+          <figcaption><span>Tri et gestion des flux</span></figcaption>
+        </figure>
+        <figure class="work-item work-item-wide" data-reveal>
+          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1600&auto=format&fit=crop" alt="Flotte de véhicules ATM Express">
+          <figcaption><span>Notre flotte au quotidien</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="section-eyebrow">05 — Ils nous font confiance</p>
+        <h2 class="section-title">La satisfaction client,<br>notre meilleure carte de visite.</h2>
+      </div>
+
+      <div class="testimonials-grid" data-reveal>
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 sur 5 étoiles">★★★★★</div>
+          <p>« ATM Express a assuré une livraison rapide et fiable, répondant parfaitement à nos attentes. Service hautement recommandé. »</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AJ</div>
+            <div>
+              <strong>Amanda Johns</strong>
+              <span>R&D, GLS</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 sur 5 étoiles">★★★★★</div>
+          <p>« Une équipe réactive et professionnelle. Nos délais sont toujours respectés, ce qui est essentiel pour notre activité. »</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RM</div>
+            <div>
+              <strong>Responsable logistique</strong>
+              <span>Grande distribution</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 sur 5 étoiles">★★★★★</div>
+          <p>« Le suivi est transparent du premier au dernier kilomètre. On sait toujours où en est notre marchandise. »</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">PL</div>
+            <div>
+              <strong>Pierre Lefebvre</strong>
+              <span>Client professionnel</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-intro" data-reveal>
+          <p class="section-eyebrow">06 — Questions fréquentes</p>
+          <h2 class="section-title">Tout ce qu'il faut savoir,<br>avant de nous confier votre colis.</h2>
+          <p class="faq-intro-text">Une autre question ? Notre équipe vous répond directement.</p>
+          <a href="#contact" class="btn btn-dark">Poser une question</a>
+        </div>
+
+        <div class="faq-list" data-reveal>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Dans quelles villes ATM Express livre-t-il ?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Nous couvrons l'ensemble du territoire français. Que votre envoi soit local ou national, notre réseau est dimensionné pour y répondre.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quels sont vos délais de livraison express ?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Les délais varient selon le service choisi et la distance, mais notre offre express est pensée pour les besoins urgents avec une prise en charge rapide.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Proposez-vous un suivi de colis ?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Oui, chaque envoi est suivi tout au long de son trajet. Vous pouvez nous contacter à tout moment pour un point sur votre livraison.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Travaillez-vous avec des entreprises et des professionnels ?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolument. Nous accompagnons aussi bien des particuliers que des professionnels, avec des solutions adaptées aux volumes et à la régularité de vos envois.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Comment obtenir un devis ?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Il suffit de remplir le formulaire de contact ci-dessous ou de nous appeler directement. Nous revenons vers vous rapidement avec une proposition adaptée.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="section-eyebrow">07 — Contact</p>
+        <h2 class="section-title">Parlons de votre prochaine livraison.</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-reveal>
+          <div class="contact-info-item">
+            <span class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <div>
+              <span class="contact-info-label">Téléphone</span>
+              <a href="tel:0773869109">07 73 86 91 09</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+            </span>
+            <div>
+              <span class="contact-info-label">E-mail</span>
+              <a href="mailto:contact@atmexpress.fr">contact@atmexpress.fr</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div>
+              <span class="contact-info-label">Adresse</span>
+              <span>4 Rue du Blason, 59650 Villeneuve-d'Ascq</span>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <span class="contact-info-label">Suivez-nous</span>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/profile.php?id=61554956401511" aria-label="Facebook" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.87v-6.99H7.9V12h2.5V9.8c0-2.47 1.47-3.83 3.72-3.83 1.08 0 2.2.19 2.2.19v2.43h-1.24c-1.22 0-1.6.76-1.6 1.54V12h2.73l-.44 2.88h-2.3v6.99A10 10 0 0 0 22 12"/></svg>
+              </a>
+              <a href="https://www.instagram.com/atm.express.nord/" aria-label="Instagram" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/company/atm-express-nord/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              </a>
+              <a href="https://twitter.com/atm_express" aria-label="Twitter / X" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.9l-5.4-6.6L4.6 22H1.5l8.1-9.3L1 2h7l4.9 6 5.9-6z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" data-reveal id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">Prénom</label>
+              <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Nom</label>
+              <input type="text" id="lastName" name="lastName" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Service souhaité</label>
+            <select id="service" name="service">
+              <option value="">Sélectionner un service</option>
+              <option value="messagerie">Messagerie rapide</option>
+              <option value="express">Livraison express</option>
+              <option value="binome">Livraison en binôme</option>
+              <option value="urgent">Transport urgent</option>
+              <option value="autre">Autre demande</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">
+            Envoyer ma demande
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <p class="form-success" id="formSuccess">Merci ! Votre demande a bien été envoyée, nous revenons vers vous rapidement.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#hero" class="logo logo-footer">
+          <span class="logo-mark">ATM</span><span class="logo-dot">.</span>
+          <span class="logo-sub">EXPRESS</span>
+        </a>
+        <p>Messagerie rapide et transport de marchandises, partout en France.</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61554956401511" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.87v-6.99H7.9V12h2.5V9.8c0-2.47 1.47-3.83 3.72-3.83 1.08 0 2.2.19 2.2.19v2.43h-1.24c-1.22 0-1.6.76-1.6 1.54V12h2.73l-.44 2.88h-2.3v6.99A10 10 0 0 0 22 12"/></svg>
+          </a>
+          <a href="https://www.instagram.com/atm.express.nord/" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/atm-express-nord/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+          <a href="https://twitter.com/atm_express" aria-label="Twitter / X" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.9l-5.4-6.6L4.6 22H1.5l8.1-9.3L1 2h7l4.9 6 5.9-6z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Pourquoi nous</a></li>
+          <li><a href="#work">Réalisations</a></li>
+          <li><a href="#testimonials">Avis clients</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Messagerie rapide</a></li>
+          <li><a href="#services">Livraison express</a></li>
+          <li><a href="#services">Livraison en binôme</a></li>
+          <li><a href="#services">Transport urgent</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:0773869109">07 73 86 91 09</a></li>
+          <li><a href="mailto:contact@atmexpress.fr">contact@atmexpress.fr</a></li>
+          <li>4 Rue du Blason<br>59650 Villeneuve-d'Ascq</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 ATM Express. Tous droits réservés.</p>
+      <p>Conçu avec rigueur pour aller plus vite, ensemble.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="#hero" class="back-to-top" id="backToTop" aria-label="Retour en haut">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
