@@ -34,9 +34,9 @@
       <ul>
         <li><a href="#about">À propos</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#process">Méthode</a></li>
         <li><a href="#why">Pourquoi nous</a></li>
         <li><a href="#work">Réalisations</a></li>
-        <li><a href="#testimonials">Avis clients</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
@@ -65,24 +65,44 @@
       <div class="hero-grid-lines" aria-hidden="true"></div>
     </div>
 
+    <div class="hero-track" aria-hidden="true">
+      <div class="hero-track-line"></div>
+      <div class="hero-track-dot" id="trackDot"></div>
+    </div>
+
     <div class="container hero-content">
-      <p class="hero-eyebrow" data-reveal>
+      <p class="hero-eyebrow hero-anim" id="heroEyebrow">
         <span class="eyebrow-dot"></span>Messagerie & transport — France entière
       </p>
-      <h1 class="hero-title" data-reveal>
-        Votre colis,<br>
-        <span class="hero-title-accent">notre vitesse.</span>
+      <h1 class="hero-title">
+        <span id="heroLine1"></span><br>
+        <span id="heroLine2" class="hero-title-accent"></span><span class="hero-caret" id="heroCaret"></span>
       </h1>
-      <p class="hero-subtitle" data-reveal>
+      <p class="hero-subtitle hero-anim" id="heroSubtitle">
         ATM Express livre plus de 1000 colis chaque mois à travers la France,
         avec la fiabilité que les plus grandes enseignes — comme Carrefour — nous reconnaissent déjà.
       </p>
-      <div class="hero-cta" data-reveal>
+      <div class="hero-cta hero-anim" id="heroCtas">
         <a href="#contact" class="btn btn-primary btn-lg">
           Nous contacter
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
         <a href="#services" class="btn btn-ghost btn-lg">Découvrir nos services</a>
+      </div>
+
+      <div class="hero-track-box hero-anim" id="heroTrackBox">
+        <label for="trackInput" class="hero-track-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          Suivez votre envoi en temps réel
+        </label>
+        <form class="hero-track-form" id="trackForm">
+          <input type="text" id="trackInput" placeholder="Entrez votre numéro de suivi (ex: ATM-123456)" autocomplete="off">
+          <button type="submit" class="btn btn-primary">
+            Suivre
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+        <p class="hero-track-result" id="trackResult"></p>
       </div>
     </div>
 
@@ -250,12 +270,62 @@
     </div>
   </section>
 
+  <!-- ============ PROCESS / COMMENT CA MARCHE ============ -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="section-eyebrow">03 — Notre méthode</p>
+        <h2 class="section-title">De votre demande à la livraison,<br>un parcours sans accroc.</h2>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-line" aria-hidden="true"></div>
+
+        <div class="process-step" data-reveal>
+          <div class="process-num">01</div>
+          <div class="process-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>
+          </div>
+          <h3>Votre demande</h3>
+          <p>Vous nous contactez par téléphone, e-mail ou via le formulaire. On cerne votre besoin en quelques minutes.</p>
+        </div>
+
+        <div class="process-step" data-reveal>
+          <div class="process-num">02</div>
+          <div class="process-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+          </div>
+          <h3>Prise en charge</h3>
+          <p>Nous récupérons votre colis à l'adresse de votre choix, avec le soin et la rigueur qui font notre réputation.</p>
+        </div>
+
+        <div class="process-step" data-reveal>
+          <div class="process-num">03</div>
+          <div class="process-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
+          </div>
+          <h3>Transport suivi</h3>
+          <p>Votre marchandise voyage sous surveillance. Vous pouvez suivre son acheminement à tout moment.</p>
+        </div>
+
+        <div class="process-step" data-reveal>
+          <div class="process-num">04</div>
+          <div class="process-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <h3>Livraison confirmée</h3>
+          <p>Le colis arrive à destination dans les délais. Mission accomplie, et un client de plus satisfait.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ WHY US ============ -->
   <section class="why" id="why">
     <div class="why-bg-shape" aria-hidden="true"></div>
     <div class="container">
       <div class="section-head section-head-light" data-reveal>
-        <p class="section-eyebrow section-eyebrow-light">03 — Pourquoi ATM Express</p>
+        <p class="section-eyebrow section-eyebrow-light">04 — Pourquoi ATM Express</p>
         <h2 class="section-title section-title-light">La rigueur d'une grande structure,<br>la réactivité d'une équipe de terrain.</h2>
       </div>
 
@@ -321,11 +391,49 @@
     </div>
   </section>
 
+  <!-- ============ COUVERTURE ============ -->
+  <section class="coverage" id="coverage">
+    <div class="container">
+      <div class="coverage-grid">
+        <div class="coverage-text" data-reveal>
+          <p class="section-eyebrow">05 — Notre terrain de jeu</p>
+          <h2 class="section-title">Partout en France,<br>du premier au dernier kilomètre.</h2>
+          <p class="coverage-lead">
+            De la métropole lilloise à l'ensemble du territoire, notre réseau est dimensionné
+            pour acheminer vos marchandises où qu'elles doivent aller. Aucune zone n'est trop loin,
+            aucun délai n'est pris à la légère.
+          </p>
+          <div class="coverage-points">
+            <div class="coverage-point">
+              <span class="coverage-point-num" data-count="96" data-suffix="">0</span>
+              <span class="coverage-point-label">Départements desservis</span>
+            </div>
+            <div class="coverage-point">
+              <span class="coverage-point-num-text">24/7</span>
+              <span class="coverage-point-label">Disponibilité sur demande</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="coverage-map" data-reveal>
+          <svg viewBox="0 0 300 320" class="france-svg" xmlns="http://www.w3.org/2000/svg" aria-label="Carte de couverture France">
+            <path class="france-path" d="M148 20 L168 28 L180 22 L195 35 L188 52 L205 60 L222 55 L235 72 L228 92 L245 105 L240 128 L255 145 L248 168 L262 185 L250 205 L258 228 L240 242 L245 265 L225 275 L228 295 L205 300 L195 285 L175 295 L158 282 L140 292 L122 280 L128 258 L108 250 L115 228 L95 218 L102 195 L82 185 L92 162 L72 150 L85 128 L70 112 L88 95 L78 72 L98 62 L92 42 L115 38 L122 22 Z"/>
+            <circle class="map-pin map-pin-1" cx="170" cy="70" r="5"/>
+            <circle class="map-pin map-pin-2" cx="120" cy="150" r="5"/>
+            <circle class="map-pin map-pin-3" cx="200" cy="180" r="5"/>
+            <circle class="map-pin map-pin-4" cx="150" cy="240" r="5"/>
+            <circle class="map-pin map-pin-5" cx="225" cy="110" r="5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ GALERIE / REALISATIONS ============ -->
   <section class="work" id="work">
     <div class="container">
       <div class="section-head" data-reveal>
-        <p class="section-eyebrow">04 — Sur le terrain</p>
+        <p class="section-eyebrow">06 — Sur le terrain</p>
         <h2 class="section-title">Nos opérations,<br>en mouvement.</h2>
       </div>
 
@@ -358,7 +466,7 @@
   <section class="testimonials" id="testimonials">
     <div class="container">
       <div class="section-head" data-reveal>
-        <p class="section-eyebrow">05 — Ils nous font confiance</p>
+        <p class="section-eyebrow">07 — Ils nous font confiance</p>
         <h2 class="section-title">La satisfaction client,<br>notre meilleure carte de visite.</h2>
       </div>
 
@@ -407,7 +515,7 @@
     <div class="container">
       <div class="faq-grid">
         <div class="faq-intro" data-reveal>
-          <p class="section-eyebrow">06 — Questions fréquentes</p>
+          <p class="section-eyebrow">08 — Questions fréquentes</p>
           <h2 class="section-title">Tout ce qu'il faut savoir,<br>avant de nous confier votre colis.</h2>
           <p class="faq-intro-text">Une autre question ? Notre équipe vous répond directement.</p>
           <a href="#contact" class="btn btn-dark">Poser une question</a>
@@ -468,7 +576,7 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-head" data-reveal>
-        <p class="section-eyebrow">07 — Contact</p>
+        <p class="section-eyebrow">09 — Contact</p>
         <h2 class="section-title">Parlons de votre prochaine livraison.</h2>
       </div>
 
@@ -636,6 +744,22 @@
 <a href="#hero" class="back-to-top" id="backToTop" aria-label="Retour en haut">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </a>
+
+<!-- ============ BOUTON WHATSAPP FLOTTANT ============ -->
+<a href="https://wa.me/33633465729" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Nous contacter sur WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.78 8.78 0 0 0 12.04 4a8.86 8.86 0 0 0-7.7 13.27L4 22l4.85-1.27a8.85 8.85 0 0 0 4.23 1.08h.01a8.86 8.86 0 0 0 6.27-15.13zM12.04 20.3a7.35 7.35 0 0 1-3.75-1.03l-.27-.16-2.79.73.74-2.72-.18-.28a7.36 7.36 0 1 1 13.65-3.91 7.37 7.37 0 0 1-7.4 7.37zm4.04-5.52c-.22-.11-1.31-.65-1.51-.72-.2-.07-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.17-.48.06a6.04 6.04 0 0 1-3.02-2.64c-.23-.39.23-.36.65-1.2a.41.41 0 0 0-.02-.39c-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43a.83.83 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86c0 1.1.8 2.16.91 2.31.11.15 1.57 2.4 3.8 3.37.53.23.94.37 1.27.47.53.17 1.02.15 1.4.09.43-.06 1.31-.54 1.5-1.06.18-.52.18-.96.13-1.06-.05-.1-.2-.16-.42-.27z"/></svg>
+</a>
+
+<!-- ============ BANDEAU COOKIES ============ -->
+<div class="cookie-banner" id="cookieBanner" aria-live="polite">
+  <div class="cookie-content">
+    <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site. En poursuivant votre navigation, vous acceptez leur utilisation.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-ghost btn-sm" id="cookieRefuse">Refuser</button>
+      <button class="btn btn-primary btn-sm" id="cookieAccept">Accepter</button>
+    </div>
+  </div>
+</div>
 
 <script src="main.js"></script>
 </body>

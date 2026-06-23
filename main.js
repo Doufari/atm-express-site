@@ -134,4 +134,116 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---------- HERO : TYPING ANIMÉ ---------- */
+  const line1El = document.getElementById('heroLine1');
+  const line2El = document.getElementById('heroLine2');
+  const caret = document.getElementById('heroCaret');
+  const heroAnims = document.querySelectorAll('.hero-anim');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const txt1 = 'Votre colis,';
+  const txt2 = 'notre vitesse.';
+
+  function revealHeroAnims() {
+    heroAnims.forEach((el, i) => {
+      setTimeout(() => el.classList.add('is-shown'), i * 130);
+    });
+  }
+
+  if (line1El && line2El) {
+    if (reduceMotion) {
+      line1El.textContent = txt1;
+      line2El.textContent = txt2;
+      if (caret) caret.classList.add('is-done');
+      revealHeroAnims();
+    } else {
+      let i = 0, j = 0;
+      const typeLine1 = () => {
+        if (i <= txt1.length) {
+          line1El.textContent = txt1.slice(0, i++);
+          setTimeout(typeLine1, 45);
+        } else {
+          setTimeout(typeLine2, 140);
+        }
+      };
+      const typeLine2 = () => {
+        if (j <= txt2.length) {
+          line2El.textContent = txt2.slice(0, j++);
+          setTimeout(typeLine2, 45);
+        } else {
+          if (caret) setTimeout(() => caret.classList.add('is-done'), 600);
+          revealHeroAnims();
+        }
+      };
+      setTimeout(typeLine1, 500);
+    }
+  }
+
+  /* ---------- HERO : POINT DE TRACKING ANIMÉ ---------- */
+  const trackDot = document.getElementById('trackDot');
+  if (trackDot && !reduceMotion) {
+    let pos = -14;
+    const moveDot = () => {
+      pos += 1.4;
+      if (pos > window.innerWidth + 14) pos = -14;
+      trackDot.style.left = pos + 'px';
+      requestAnimationFrame(moveDot);
+    };
+    moveDot();
+  }
+
+  /* ---------- SUIVI DE COLIS (démo) ---------- */
+  const trackForm = document.getElementById('trackForm');
+  const trackInput = document.getElementById('trackInput');
+  const trackResult = document.getElementById('trackResult');
+
+  if (trackForm) {
+    trackForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = trackInput.value.trim();
+      if (!val) {
+        trackResult.textContent = 'Veuillez saisir un numéro de suivi.';
+        trackResult.classList.add('is-shown');
+        return;
+      }
+      // Démo : pas de vrai système de tracking branché.
+      trackResult.innerHTML = '📦 Colis <strong>' + val.replace(/[<>]/g, '') +
+        '</strong> : en cours d\'acheminement. Pour le statut détaillé en temps réel, ' +
+        'contactez-nous au +33 6 33 46 57 29.';
+      trackResult.classList.remove('is-shown');
+      void trackResult.offsetWidth;
+      trackResult.classList.add('is-shown');
+    });
+  }
+
+  /* ---------- CARTE FRANCE : dessin au scroll ---------- */
+  const coverageMap = document.querySelector('.coverage-map');
+  if (coverageMap && 'IntersectionObserver' in window) {
+    const mapObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          mapObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    mapObserver.observe(coverageMap);
+  } else if (coverageMap) {
+    coverageMap.classList.add('is-visible');
+  }
+
+  /* ---------- BANDEAU COOKIES ---------- */
+  const cookieBanner = document.getElementById('cookieBanner');
+  const cookieAccept = document.getElementById('cookieAccept');
+  const cookieRefuse = document.getElementById('cookieRefuse');
+
+  // NOTE: pas de localStorage dans cet environnement de prévisualisation.
+  // Le choix est mémorisé le temps de la session via une variable.
+  if (cookieBanner) {
+    setTimeout(() => cookieBanner.classList.add('is-visible'), 1500);
+    const closeCookie = () => cookieBanner.classList.remove('is-visible');
+    if (cookieAccept) cookieAccept.addEventListener('click', closeCookie);
+    if (cookieRefuse) cookieRefuse.addEventListener('click', closeCookie);
+  }
+
 });

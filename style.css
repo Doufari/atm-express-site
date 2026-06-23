@@ -712,6 +712,168 @@ section{padding:120px 0;}
 .back-to-top.is-visible{opacity:1;visibility:visible;transform:translateY(0);}
 .back-to-top:hover{background:var(--black);color:var(--yellow);}
 
+
+/* ===================================================================
+   HERO — Animations enrichies (typing, caret, ligne tracking)
+   =================================================================== */
+.hero-anim{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease), transform .8s var(--ease);}
+.hero-anim.is-shown{opacity:1;transform:translateY(0);}
+
+.hero-caret{
+  display:inline-block;width:3px;height:0.9em;background:var(--yellow);
+  margin-left:4px;vertical-align:text-bottom;
+  animation:caretBlink 0.8s step-end infinite;
+}
+@keyframes caretBlink{0%,100%{opacity:1}50%{opacity:0}}
+.hero-caret.is-done{animation:none;opacity:0;}
+
+.hero-track{position:absolute;top:130px;left:0;width:100%;height:2px;z-index:1;pointer-events:none;}
+.hero-track-line{position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,212,0,0.18),transparent);}
+.hero-track-dot{
+  position:absolute;top:-6px;left:0;width:14px;height:14px;border-radius:50%;
+  background:var(--yellow);box-shadow:0 0 16px 2px rgba(255,212,0,0.6);
+}
+
+/* Barre de suivi de colis */
+.hero-track-box{
+  margin-top:38px;max-width:560px;
+  background:rgba(20,20,20,0.6);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:var(--radius-md);
+  padding:22px 24px;
+}
+.hero-track-label{
+  display:flex;align-items:center;gap:9px;
+  font-family:var(--font-display);font-weight:700;font-size:0.92rem;
+  color:var(--white-pure);margin-bottom:14px;
+}
+.hero-track-label svg{color:var(--yellow);}
+.hero-track-form{display:flex;gap:10px;}
+.hero-track-form input{
+  flex:1;padding:13px 16px;border-radius:100px;
+  border:1.5px solid rgba(255,255,255,0.15);
+  background:rgba(0,0,0,0.35);color:var(--white-pure);
+  font-size:0.92rem;transition:border-color .3s, box-shadow .3s;
+}
+.hero-track-form input::placeholder{color:rgba(255,255,255,0.4);}
+.hero-track-form input:focus{
+  outline:none;border-color:var(--yellow);
+  box-shadow:0 0 0 4px rgba(255,212,0,0.15);
+}
+.hero-track-form .btn{padding:13px 24px;}
+.hero-track-result{
+  margin-top:14px;font-size:0.88rem;line-height:1.5;
+  color:var(--yellow);display:none;
+}
+.hero-track-result.is-shown{display:block;animation:fadeInUp .5s var(--ease);}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===================================================================
+   PROCESS / COMMENT CA MARCHE
+   =================================================================== */
+.process{background:var(--white);}
+.process-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:28px;
+  position:relative;
+}
+.process-line{
+  position:absolute;top:38px;left:12%;right:12%;height:2px;
+  background:repeating-linear-gradient(90deg,var(--grey-line) 0 8px,transparent 8px 16px);
+  z-index:0;
+}
+.process-step{position:relative;z-index:1;text-align:center;}
+.process-num{
+  font-family:var(--font-display);font-weight:900;font-size:0.85rem;
+  color:var(--yellow-deep);margin-bottom:14px;
+}
+.process-icon{
+  width:76px;height:76px;border-radius:50%;
+  background:var(--white-pure);border:2px solid var(--black);
+  color:var(--black);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 22px;
+  transition:transform .4s var(--ease), background .4s, color .4s, border-color .4s;
+}
+.process-step:hover .process-icon{
+  background:var(--yellow);border-color:var(--yellow);transform:translateY(-6px) scale(1.05);
+}
+.process-step h3{
+  font-family:var(--font-display);font-weight:700;font-size:1.12rem;margin-bottom:10px;
+}
+.process-step p{font-size:0.9rem;line-height:1.55;color:var(--grey-text);max-width:240px;margin:0 auto;}
+
+/* ===================================================================
+   COUVERTURE / CARTE FRANCE
+   =================================================================== */
+.coverage{background:var(--white-pure);overflow:hidden;}
+.coverage-grid{
+  display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:center;
+}
+.coverage-lead{font-size:1.05rem;line-height:1.7;color:var(--grey-text);margin:24px 0 36px;}
+.coverage-points{display:flex;gap:48px;}
+.coverage-point-num,.coverage-point-num-text{
+  display:block;font-family:var(--font-display);font-weight:900;
+  font-size:2.6rem;color:var(--black);line-height:1;
+}
+.coverage-point-num-text{color:var(--yellow-deep);}
+.coverage-point-label{font-size:0.88rem;color:var(--grey-text);margin-top:6px;display:block;}
+
+.coverage-map{display:flex;justify-content:center;}
+.france-svg{width:100%;max-width:340px;height:auto;}
+.france-path{
+  fill:rgba(10,10,10,0.04);
+  stroke:var(--black);stroke-width:2;
+  stroke-dasharray:1400;stroke-dashoffset:1400;
+}
+.coverage-map.is-visible .france-path{
+  animation:drawFrance 2.4s var(--ease) forwards;
+}
+@keyframes drawFrance{to{stroke-dashoffset:0;fill:rgba(255,212,0,0.07);}}
+.map-pin{fill:var(--yellow-deep);opacity:0;transform-origin:center;}
+.coverage-map.is-visible .map-pin{animation:pinPop .5s var(--ease) forwards;}
+.coverage-map.is-visible .map-pin-1{animation-delay:1.6s;}
+.coverage-map.is-visible .map-pin-2{animation-delay:1.8s;}
+.coverage-map.is-visible .map-pin-3{animation-delay:2s;}
+.coverage-map.is-visible .map-pin-4{animation-delay:2.2s;}
+.coverage-map.is-visible .map-pin-5{animation-delay:2.4s;}
+@keyframes pinPop{0%{opacity:0;transform:scale(0)}60%{opacity:1;transform:scale(1.4)}100%{opacity:1;transform:scale(1)}}
+
+/* ===================================================================
+   WHATSAPP FLOTTANT
+   =================================================================== */
+.whatsapp-float{
+  position:fixed;bottom:28px;left:28px;z-index:500;
+  width:56px;height:56px;border-radius:50%;
+  background:#25D366;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 24px -6px rgba(37,211,102,0.6);
+  transition:transform .35s var(--ease), box-shadow .35s;
+  animation:waPulse 2.4s ease-in-out infinite;
+}
+.whatsapp-float:hover{transform:scale(1.1) translateY(-2px);box-shadow:0 12px 28px -6px rgba(37,211,102,0.7);}
+@keyframes waPulse{0%,100%{box-shadow:0 8px 24px -6px rgba(37,211,102,0.6), 0 0 0 0 rgba(37,211,102,0.4);}50%{box-shadow:0 8px 24px -6px rgba(37,211,102,0.6), 0 0 0 12px rgba(37,211,102,0);}}
+
+/* ===================================================================
+   BANDEAU COOKIES
+   =================================================================== */
+.cookie-banner{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(140%);
+  z-index:600;width:min(720px,calc(100% - 40px));
+  background:var(--black);color:var(--white-pure);
+  border-radius:var(--radius-md);
+  box-shadow:0 20px 50px -16px rgba(0,0,0,0.5);
+  transition:transform .55s var(--ease);
+}
+.cookie-banner.is-visible{transform:translateX(-50%) translateY(0);}
+.cookie-content{
+  display:flex;align-items:center;gap:24px;padding:20px 26px;flex-wrap:wrap;
+}
+.cookie-content p{font-size:0.9rem;line-height:1.5;color:rgba(250,250,250,0.8);flex:1;min-width:240px;}
+.cookie-actions{display:flex;gap:10px;flex-shrink:0;}
+.cookie-actions .btn-ghost{color:var(--white-pure);border-color:rgba(255,255,255,0.3);}
+
+
 /* ===================================================================
    RESPONSIVE
    =================================================================== */
@@ -724,6 +886,11 @@ section{padding:120px 0;}
   .work-item-lg{grid-column:span 2;grid-row:span 1;}
   .work-item-wide{grid-column:span 2;}
   .footer-top{grid-template-columns:1fr 1fr;gap:40px;}
+  .process-grid{grid-template-columns:repeat(2,1fr);gap:40px 28px;}
+  .process-line{display:none;}
+  .coverage-grid{grid-template-columns:1fr;gap:40px;}
+  .coverage-map{order:-1;}
+  .france-svg{max-width:260px;}
 }
 
 @media (max-width: 860px){
@@ -756,4 +923,10 @@ section{padding:120px 0;}
   .btn-lg{padding:15px 24px;font-size:0.92rem;}
   .hero-cta{flex-direction:column;align-items:stretch;}
   .contact-form{padding:28px;}
+  .process-grid{grid-template-columns:1fr;}
+  .hero-track-form{flex-direction:column;}
+  .hero-track-form .btn{justify-content:center;}
+  .coverage-points{gap:28px;}
+  .whatsapp-float{bottom:20px;left:20px;width:50px;height:50px;}
+  .cookie-content{padding:18px 20px;}
 }
